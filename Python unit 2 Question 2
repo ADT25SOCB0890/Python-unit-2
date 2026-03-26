@@ -1,0 +1,17 @@
+class Library:
+    def __init__(self, book, author, available=True):
+        self.book = book
+        self.author = author
+        self.available = available
+
+    def checkout(self):
+        self.available = False
+
+    def return_book(self):
+        self.available = True
+
+    def display(self):
+        print(self.book, self.author, self.available)
+
+b1 = Library("Python", "ABC")
+b1.display()
